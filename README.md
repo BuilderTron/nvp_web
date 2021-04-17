@@ -1,4 +1,4 @@
-# Nelson's Video & Photography Website 2020
+# Nelson's Video & Photography Website 2021
 **Version 1**
 
 This is Nelson's Video & Photography website designed by
@@ -17,7 +17,7 @@ Jose J. Lopez.
 
 ## License & copyright
 
-Copyright (c) [2020] [Nelson's Video & Photography]
+Copyright (c) [2021] [Nelson's Video & Photography]
 
 ---
 
