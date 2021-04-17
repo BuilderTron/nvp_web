@@ -1,5 +1,5 @@
 # Nelson's Video & Photography Website 2021
-**Version 1**
+**Version 2**
 
 This is Nelson's Video & Photography website managed by
 Jose J. Lopez.
