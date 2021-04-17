@@ -1,7 +1,7 @@
 # Nelson's Video & Photography Website 2021
 **Version 1**
 
-This is Nelson's Video & Photography website designed by
+This is Nelson's Video & Photography website managed by
 Jose J. Lopez.
 
 ---
@@ -11,8 +11,14 @@ Jose J. Lopez.
 - About
 - Services
 - Client Galleries
-- Blog
+- Portfolio
 - Contact
+---
+
+## Updates (Experimental)
+
+- Client Video Streaming Service
+- Event Live Streaming
 ---
 
 ## License & copyright
