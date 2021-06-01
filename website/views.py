@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import HomeSlider
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html', {})
+    slide = HomeSlider.objects.all()
+    return render(request, 'index.html', {'slides': slide})
 
 
 def about(request):
@@ -27,3 +29,10 @@ def blog(request):
 
 def contact(request):
     return render(request, 'contact.html', {})
+
+
+
+# Test page for models and forms
+def test(request):
+    
+    return render(request, 'test.html', {})

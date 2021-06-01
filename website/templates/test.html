@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<h1>Hello</h1>
+
+{% for slide in slides%}
+
+<h2>{{ slide.title }}</h2>
+<img src="{{ slide.image.url }}">
+
+
+{% endfor %}
