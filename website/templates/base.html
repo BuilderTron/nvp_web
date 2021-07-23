@@ -1,7 +1,5 @@
 {% load static %}
 
-
-
 <!DOCTYPE html>
 <html lang="en-US" data-menu="leftalign_center">
 
@@ -13,6 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
+
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <!--Index stylesheets-->
     <link rel='stylesheet' href="{% static 'website/css/settings.css'%}" type='text/css' media='all' />
@@ -36,49 +37,10 @@
     <link rel="apple-touch-icon-precomposed" href="{% static 'website/upload/TG-Thumb.png' %}" />
     <meta name="msapplication-TileImage" content="{% static 'website/upload/TG-Thumb.png' %}" />
 
-
-<!--About stylesheets-->
-    
-
-
-
-
-
-
-
-<!--Services stylesheets-->
-    {% comment %} <link rel='stylesheet' href="{% static 'website/css/reset.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/wordpress.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/animation.css' %}" type='text/css' media='all' />
-
-    <link rel='stylesheet' href="{% static 'website/css/custom-ui.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/mediaelementplayer.min.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/flexslider.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/tooltipster.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/odometer-theme-minimal.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/hw-parallax.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/screen.css' %}"'' type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/grid.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/kirki-styles.css' %}" type='text/css' media='all' />
-
-
-
-
-
-    <link rel='stylesheet' id='font-awesome-css' href="{% static 'website/css/font-awesome.min.css' %}" type='text/css' media='all' />
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round%3A300%2C400%2C600%2C700%2C400italic%7CKarla%3A300%2C400%2C600%2C700%2C400italic&#038;subset=latin%2Clatin-ext%2Ccyrillic-ext%2Cgreek-ext%2Ccyrillic' type='text/css' media='all' />
-    <link href="http://fonts.googleapis.com/css?family=Karla:400" rel="stylesheet" property="stylesheet" type="text/css" media="all">
-
-    <link rel="icon" href="{% static 'website/upload/TG-Thumb.png' %}" sizes="32x32" />
-    <link rel="icon" href="{% static 'website/upload/TG-Thumb.png' %}" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="{% static 'website/upload/TG-Thumb.png' %}" />
-    <meta name="msapplication-TileImage" content="{% static 'website/upload/TG-Thumb.png' %}" />
-     {% endcomment %}
-
 </head>
 
 
-
+<body class="home page-template-default page page-id-4520 woocommerce-no-js">
 
 
 
@@ -103,8 +65,7 @@
                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
                 <li class="menu-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                {% comment %} <li class="menu-item"><a href="{% url 'clients' %}">Client Gallery</a></li> {% endcomment %}
-                <li class="menu-item"><a href="{% url 'blog' %}">Blog</a></li>
+                <li class="menu-item"><a href="{% url 'blog:all_blogs' %}">Blog</a></li>
                 <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </div>
@@ -147,6 +108,15 @@
     </div>
     <!-- End mobile menu -->
     <!-- Begin template wrapper -->
+
+
+
+
+
+
+
+
+
     <div id="wrapper" class="hasbg">
 
         <div class="header_style_wrapper">
@@ -185,8 +155,7 @@
                                                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                                                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
                                                 <li class="menu-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                                                {% comment %} <li class="menu-item"><a href="{% url 'clients' %}">Client Gallery</a></li> {% endcomment %}
-                                                <li class="menu-item"><a href="{% url 'blog' %}">Blog</a></li>
+                                                <li class="menu-item"><a href="{% url 'blog:all_blogs' %}">Blog</a></li>
                                                 <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
                                             </ul>
                                         </div>
@@ -217,9 +186,11 @@
 
 
 
+    <div class="ppb_wrapper">
+            {% block content %}{% endblock %}
+    </div>
 
 
-{% block content %}{% endblock %}
 
 
 
@@ -229,7 +200,6 @@
 
 
         <div class="footer_bar  ">
-
             <div class="footer_bar_wrapper ">
                 <div class="social_wrapper">
                     <ul>
@@ -246,18 +216,20 @@
             </div>
         </div>
 
+
     </div>
 
-    <div id="overlay_background">
-    </div>
+    <div id="overlay_background"></div>
 
+<!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!--Index stylesheets-->
     <input type="hidden" id="pp_menu_layout" name="pp_menu_layout" value="leftalign_center" />
     <input type="hidden" id="pp_enable_right_click" name="pp_enable_right_click" value="" />
     <input type="hidden" id="pp_enable_dragging" name="pp_enable_dragging" value="" />
-    <input type="hidden" id="pp_image_path" name="pp_image_path" value="images/" />
-    <input type="hidden" id="pp_homepage_url" name="pp_homepage_url" value="index.html" />
+    <input type="hidden" id="pp_image_path" name="pp_image_path" value="{% static 'media/images/' %}" />
+    <input type="hidden" id="pp_homepage_url" name="pp_homepage_url" value="{% static 'website/templates/index.html' %}" />
     <input type="hidden" id="grandportfolio_ajax_search" name="grandportfolio_ajax_search" value="1" />
     <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1" />
     <input type="hidden" id="pp_topbar" name="pp_topbar" value="" />
@@ -299,27 +271,6 @@
     </script>
 
 
-<!--Services stylesheets-->
-
-    {% comment %} <script src='js/jquery.js'></script>
-    <script src='js/jquery-migrate.min.js'></script> 
-    <script src="{% static 'website/js/plugins/masonry.pkgd.min.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.requestAnimationFrame.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.mousewheel.min.js' %}"></script>
-    <script src="{% static 'website/js/plugins/ilightbox.packed.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.easing.js' %}"></script>
-    <script src="{% static 'website/js/plugins/waypoints.min.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.isotope.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.masory.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.tooltipster.min.js' %}"></script>
-    <script src="{% static 'website/js/plugins/hw-parallax.js' %}"></script>
-    <script src="{% static 'website/js/plugins/custom_plugins.js' %}"></script>
-    <script src="{% static 'website/js/plugins/custom.js' %}"></script>
-    <script src='js/plugins/custom_onepage.js'></script>
-    <script src="{% static 'website/js/plugins/horizontal_gallery.js' %}"></script>
-    <script src="{% static 'website/js/plugins/jquery.cycle2.min.js' %}"></script>
-    <script src="{% static 'website/js/plugins/custom_cycle.js' %}"></script>
-    <script src='js/plugins/jquery.cookie.js'></script> {% endcomment %}
 
 
 
@@ -573,7 +524,6 @@
             }; /* END OF ON LOAD FUNCTION */
         }()); /* END OF WRAPPING FUNCTION */
     </script>
-
 
 </body>
 </html>

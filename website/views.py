@@ -1,10 +1,19 @@
-from django.shortcuts import render
-from .models import HomeSlider
+from django.shortcuts import render, get_object_or_404
+from .models import HeroSlide, Service, Event
+from blog.models import Blog
 
 # Create your views here.
 def home(request):
-    slide = HomeSlider.objects.all()
-    return render(request, 'index.html', {'slides': slide})
+    slide = HeroSlide.objects.all()
+    service = Service.objects.all()
+    event = Event.objects.all()
+    feat_blog = Blog.objects.order_by('-publish')[:2]
+    return render(request, 'index.html', {'slides': slide, 'services': service, 'events': event, 'feat_blogs': feat_blog})
+
+
+def sin_blog(request, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
+    return render(request, 'blog/single_blog.html', {'blog': blog})
 
 
 def about(request):

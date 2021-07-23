@@ -1,0 +1,15 @@
+<h1>All Blogs</h1>
+
+{% for blog in blogs %}
+
+
+<img src="{{ blog.image.url }}">
+<a href="{% url 'blog:single_blog' blog.id %}">
+    <h2>{{ blog.title }}</h2>
+</a>
+<h4>{{ blog.publish }}</h4>
+<p>{{ blog.description|striptags|truncatechars:100 }}</p>
+
+
+{% endfor %}
+
