@@ -64,7 +64,18 @@
                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
-                <li class="menu-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Main Portfolio</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="{% url 'portfolio_wedding' %}">Wedding</a></li>
+                                <li class="menu-item"><a href="{% url 'portfolio_quince' %}">Quinceaños</a></li>
+                                <li class="menu-item"><a href="{% url 'portfolio_portrait' %}">Portraits</a></li>
+                                <li class="menu-item"><a href="{% url 'portfolio_commercial' %}">Commercial</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li class="menu-item"><a href="{% url 'blog:all_blogs' %}">Blog</a></li>
                 <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
@@ -154,7 +165,16 @@
                                                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                                                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                                                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
-                                                <li class="menu-item"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+
+                                                <li class=" menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="{% url 'portfolio_wedding' %}">Wedding</a></li>
+                                                        <li class="menu-item"><a href="{% url 'portfolio_quince' %}">Quinceaños</a></li>
+                                                        <li class="menu-item"><a href="{% url 'portfolio_portrait' %}">Portraits</a></li>
+                                                        <li class="menu-item"><a href="{% url 'portfolio_commercial' %}">Commercial</a></li>
+                                                    </ul>
+                                                </li>
+
                                                 <li class="menu-item"><a href="{% url 'blog:all_blogs' %}">Blog</a></li>
                                                 <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
                                             </ul>

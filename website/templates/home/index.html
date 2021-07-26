@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "home/base.html" %}
 
 {% load static %}
 {% block content %}
@@ -126,7 +126,7 @@
             <div class="page_content_wrapper">
                 <div class="inner">
                     <div style="margin:auto;width:100%">
-                        <h2 class="ppb_title" style="">Galleries</h2>
+                        <h2 class="ppb_title" style="">Portfolio</h2>
                     </div>
                 </div>
             </div>
@@ -259,21 +259,21 @@
                         
                             <div id="post-4423" class="post type-post hentry status-publish">
                                 <div class="post_wrapper grid_layout">
-                                    {% for feat_blog in feat_blogs %}
+                                    {% for blog in feat_blogs %}
                                     <div class="post_img small">
                                         <a href="{% url 'blog:single_blog' blog.id %}">
-                                            <img src="{{ feat_blog.image.url }}"
+                                            <img src="{{ blog.image.url }}"
                                                 alt="Awesome Support" class="" />
                                         </a>
                                     </div>
                                     <div class="blog_grid_content">
                                         <div class="post_header grid">
-                                            <div class="post_info_cat">{{ feat_blog.publish }}
+                                            <div class="post_info_cat">{{ blog.publish }}
                                             </div>
                                             <h6>
-                                                <a href="{% url 'blog:single_blog' blog.id %}" title="Awesome Support">{{ feat_blog.title }}</a>
+                                                <a href="{% url 'blog:single_blog' blog.id %}" title="Awesome Support">{{ blog.title }}</a>
                                             </h6>
-                                        </div>{{ feat_blog.description|striptags|truncatechars:100 }}
+                                        </div>{{ blog.description|striptags|truncatechars:100 }}
                                     </div>
                                     {% endfor %}
                                 </div>
