@@ -49,8 +49,8 @@ def portfolio_commercial(request):
 #     return render(request, 'clients.html', {})
 
 
-def blog(request):
-    return render(request, 'home/blog.html', {})
+# def blog(request):
+#     return render(request, 'home/blog.html', {})
 
 
 def sin_blog(request, blog_id):
