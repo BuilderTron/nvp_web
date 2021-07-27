@@ -8,7 +8,7 @@ def all_blogs (request):
 
 def single_blog (request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'blog/single_blog.html', {'blog':blog})
+    return render(request, 'blog/single_blog.html', {'blog': blog})
 
 # def featured_blogs (request):
 #     feat_blog = Blog.objects.order_by('-publish')[:2]

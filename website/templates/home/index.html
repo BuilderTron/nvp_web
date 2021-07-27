@@ -40,6 +40,39 @@
 
     <!-- Services -->
 
+    <!-- <div class="standard_wrapper">
+        <div class="one withsmallpadding ppb_text" style="padding-top:0 !important;padding:50px 0 50px 0;">
+            
+            <div class="page_content_wrapper">
+                <div class="inner">
+                    <div class="inner_wrapper">
+                        <div class="blog_grid_wrapper sidebar_content full_width ppb_blog_posts two_cols" data-columns="2">
+
+                            {% for service in services %}
+                            <div class="post type-post hentry status-publish">
+                                <div class="post_wrapper grid_layout">
+
+                                    <div style="margin:auto; width:100%; ">
+                                        <h2>{{ service.title }}</h2>
+                                        <img src="{{ service.image.url }}" alt="">
+                                        <p>{{ service.description }}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <div class="container">
         <div class="row  ppb_text align-items-center " style="padding:50px 50px 50px 50px;">
             {% for service in services %}
             <div class=" col-lg-4 col-sm-6 single-item d-inline" style="margin:auto;">
@@ -49,25 +82,33 @@
             </div>
             {% endfor %}
         </div>
+    </div>
 
+    
 <!-- 
     <div class="standard_wrapper">
         <div class="one_third withsmallpadding ppb_text" style="padding:50px 0px 50px 0px; ">
-            {% for service in services %}
+            
             <div class="standard_wrapper">
                 <div class="page_content_wrapper">
                     <div class="inner">
-                        <div style="margin:auto; width:100%; display: inline-block; ">
+                        
+                        <div style="margin:auto; width:100%; ">
+                            {% for service in services %}
                             <h2>{{ service.title }}</h2>
                             <img src="{{ service.image.url }}" alt="">
                             <p>{{ service.description }}</p>
+                            {% endfor %}
                         </div>
+                        
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            
         </div>
     </div> -->
+
+
 
     <!-- Special Events -->
     <div class="one fullwidth ">
@@ -235,20 +276,23 @@
     </div>
 
     <!-- Featured Blog Title -->
-    <div class="one withsmallpadding ppb_header " style="text-align:center;padding:50px 0 50px 0;">
+    <!-- <div class="one withsmallpadding ppb_header " style="text-align:center;padding:50px 0 50px 0;">
         <div class="standard_wrapper">
             <div class="page_content_wrapper">
                 <div class="inner">
                     <div style="margin:auto;width:100%">
-                        <h2 class="ppb_title" style="">Latest News</h2>
+                        <a href="{% url 'blog:all_blogs' %}">
+                            <h2 class="ppb_title" style="">Latest News</h2>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Featured Blog -->
-    <div class="standard_wrapper">
+    <!-- <div class="standard_wrapper">
         <div class="one withsmallpadding" style="padding-top:0 !important;padding:50px 0 50px 0;">
             <div class="page_content_wrapper">
                 <div class="inner">
@@ -256,10 +300,10 @@
                         <div id="1529316978913119821"
                             class="blog_grid_wrapper sidebar_content full_width ppb_blog_posts two_cols"
                             data-columns="2">
-                        
+                            {% for blog in feat_blogs %}
                             <div id="post-4423" class="post type-post hentry status-publish">
                                 <div class="post_wrapper grid_layout">
-                                    {% for blog in feat_blogs %}
+                                    
                                     <div class="post_img small">
                                         <a href="{% url 'blog:single_blog' blog.id %}">
                                             <img src="{{ blog.image.url }}"
@@ -275,10 +319,12 @@
                                             </h6>
                                         </div>{{ blog.description|striptags|truncatechars:100 }}
                                     </div>
-                                    {% endfor %}
+                                    
                                 </div>
                             
                             </div>
+                            {% endfor %} -->
+
 
                             <!-- <div id="post-4417" class="post type-post hentry status-publish">
                                 <div class="post_wrapper grid_layout">
