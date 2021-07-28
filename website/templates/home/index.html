@@ -40,6 +40,73 @@
 
     <!-- Services -->
 
+
+
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+                            </p>
+                            <h2>Photography</h2>
+                            <p>
+                                <img src="{% static 'website/upload/pic1.jpg' %}" alt="" />
+                                <br /> Morbi leo risus, porta ac consectetur ac feanumi vestibulum at eros. Fusce
+                                dapibus, tellus ac cursus commodo, tortor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+                            </p>
+                            <h2>Film</h2>
+                            <p>
+                                <img src="{% static 'website/upload/pic2.jpg' %}" alt="" />
+                                <br /> Morbi leo risus, porta ac consectetur ac feanumi vestibulum at eros. Fusce
+                                dapibus, tellus ac cursus commodo, tortor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third last withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+                            </p>
+                            <h2>Marketing</h2>
+                            <p>
+                                <img src="{% static 'website/upload/pic3.jpg' %}" alt="" />
+                                <br /> Morbi leo risus, porta ac consectetur ac feanumi vestibulum at eros. Fusce
+                                dapibus, tellus ac cursus commodo, tortor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
     <!-- <div class="standard_wrapper">
         <div class="one withsmallpadding ppb_text" style="padding-top:0 !important;padding:50px 0 50px 0;">
             
@@ -72,7 +139,7 @@
 
 
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row  ppb_text align-items-center " style="padding:50px 50px 50px 50px;">
             {% for service in services %}
             <div class=" col-lg-4 col-sm-6 single-item d-inline" style="margin:auto;">
@@ -82,7 +149,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </div> -->
 
     
 <!-- 
@@ -167,7 +234,10 @@
             <div class="page_content_wrapper">
                 <div class="inner">
                     <div style="margin:auto;width:100%">
-                        <h2 class="ppb_title" style="">Portfolio</h2>
+                        <a href="{% url 'portfolio' %}">
+                            <h2 class="ppb_title" style="">Portfolio</h2>
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -183,77 +253,92 @@
                     data-columns="4">
                     <div class="element classic4_cols">
                         <div class="one_fourth gallery4 classic filterable static animated1">
-                            <a href="#"><img src="{% static 'website/upload/man_23-1.jpg' %}" alt="Men Coat" />
+                            <a href="{% url 'portfolio_wedding' %}"><img src="{% static 'website/upload/Wedding.jpg' %}" alt="Men Coat" />
                                 <div class="portfolio_classic_icon_wrapper">
                                     <div class="portfolio_classic_icon_content">
-                                        <i class="fa fa-shopping-cart"></i>
+                                        <i class="fa fa-table"></i>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <br class="clear" />
                         <div id="portfolio_desc_4542" class="portfolio_desc portfolio4  filterable">
-                            <h5>Men Coat</h5>
-                            <div class="product_price"><span class="woocommerce-Price-amount amount"><span
+                            <a href="{% url 'portfolio_wedding' %}">
+                                <h5>Weddings</h5>
+                            </a>
+                            
+                            <!-- <div class="product_price"><span class="woocommerce-Price-amount amount"><span
                                         class="woocommerce-Price-currencySymbol">&#36;</span>199.00</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="element classic4_cols">
                         <div class="one_fourth gallery4 classic filterable static animated2">
-                            <a href="#"><img src="{% static 'website/upload/woman_21-1.jpg' %}"
+                            <a href="{% url 'portfolio_quince' %}"><img src="{% static 'website/upload/XV.jpg' %}"
                                     alt="Trending T Shirt" />
                                 <div class="portfolio_classic_icon_wrapper">
                                     <div class="portfolio_classic_icon_content">
-                                        <i class="fa fa-shopping-cart"></i>
+                                        <i class="fa fa-table"></i>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <br class="clear" />
                         <div id="portfolio_desc_4545" class="portfolio_desc portfolio4  filterable">
-                            <h5>Trending T Shirt</h5>
-                            <div class="product_price"><span class="woocommerce-Price-amount amount"><span
+                            <a href="{% url 'portfolio_quince' %}">
+                                <h5>Quinceaños</h5>
+                            </a>
+                            
+                            <!-- <div class="product_price"><span class="woocommerce-Price-amount amount"><span
                                         class="woocommerce-Price-currencySymbol">&#36;</span>79.00</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
+
                     <div class="element classic4_cols">
                         <div class="one_fourth gallery4 classic filterable static animated3">
-                            <a href="#"><img src="{% static 'website/upload/woman_22-1.jpg' %}" alt="Casual Dress" />
+                            <a href="{% url 'portfolio_portrait' %}"><img src="{% static 'website/upload/portraits.jpg' %}" alt="Casual Dress" />
                                 <div class="portfolio_classic_icon_wrapper">
                                     <div class="portfolio_classic_icon_content">
-                                        <i class="fa fa-shopping-cart"></i>
+                                        <i class="fa fa-table"></i>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <br class="clear" />
                         <div id="portfolio_desc_4548" class="portfolio_desc portfolio4  filterable">
-                            <h5>Casual Dress</h5>
-                            <div class="product_price"><del><span class="woocommerce-Price-amount amount"><span
+                            <a href="{% url 'portfolio_portrait' %}">
+                                <h5>Portraits</h5>
+                            </a>
+                            
+                            <!-- <div class="product_price"><del><span class="woocommerce-Price-amount amount"><span
                                             class="woocommerce-Price-currencySymbol">&#36;</span>99.00</span></del>
                                 <ins><span class="woocommerce-Price-amount amount"><span
                                             class="woocommerce-Price-currencySymbol">&#36;</span>69.00</span></ins>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
+
+                    
                     <div class="element classic4_cols">
                         <div class="one_fourth gallery4 classic filterable static animated4">
-                            <a href="#"><img src="{% static 'website/upload/super_man-1.jpg' %}" alt="Elegant Suite" />
+                            <a href="{% url 'portfolio_commercial' %}"><img src="{% static 'website/upload/super_man-1.jpg' %}" alt="Elegant Suite" />
                                 <div class="portfolio_classic_icon_wrapper">
                                     <div class="portfolio_classic_icon_content">
-                                        <i class="fa fa-shopping-cart"></i>
+                                        <i class="fa fa-table"></i>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <br class="clear" />
                         <div id="portfolio_desc_4551" class="portfolio_desc portfolio4  filterable">
-                            <h5>Elegant Suite</h5>
-                            <div class="product_price"><span class="woocommerce-Price-amount amount"><span
+                            <a href="{% url 'portfolio_commercial' %}">
+                                <h5>Maternity</h5>
+                            </a>
+                            
+                            <!-- <div class="product_price"><span class="woocommerce-Price-amount amount"><span
                                         class="woocommerce-Price-currencySymbol">&#36;</span>199.00</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
