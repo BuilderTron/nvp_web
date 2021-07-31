@@ -24,6 +24,15 @@ def about(request):
 def services(request):
     return render(request, 'home/services.html', {})
 
+def services_photo(request):
+    return render(request, 'home/services_photo.html', {})
+
+def services_film(request):
+    return render(request, 'home/services_film.html', {})
+
+def services_corporate(request):
+    return render(request, 'home/services_corporate.html', {})
+
 
 
 
@@ -41,6 +50,12 @@ def portfolio_portrait(request):
 
 def portfolio_commercial(request):
     return render(request, 'home/portfolio_commercial.html', {})
+
+def portfolio_grad(request):
+    return render(request, 'home/portfolio_grad.html', {})
+
+def portfolio_maternity(request):
+    return render(request, 'home/portfolio_maternity.html', {})
 
 
 

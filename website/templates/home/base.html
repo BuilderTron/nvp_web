@@ -49,7 +49,7 @@
 
     <div class="mobile_menu_wrapper">
 
-        <form method="get" name="searchform" id="searchform" action="index.html">
+        <!-- <form method="get" name="searchform" id="searchform" action="index.html">
             <div>
                 <input type="text" value="" name="s" id="s" autocomplete="off" placeholder="Search..." />
                 <button>
@@ -57,21 +57,32 @@
                 </button>
             </div>
             <div id="autocomplete"></div>
-        </form>
+        </form> -->
 
         <div class="menu-main-menu-container">
             <ul id="mobile_main_menu" class="mobile_main_nav">
                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
+                <!-- <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="{% url 'services_photo' %}">Photography</a></li>
+                                <li class="menu-item"><a href="{% url 'services_film' %}">Film</a></li>
+                                <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> -->
                 <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
                     <ul class="sub-menu">
-                        <li class="menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Main Portfolio</a>
+                        <li class="menu-item menu-item-has-children arrow">
                             <ul class="sub-menu">
                                 <li class="menu-item"><a href="{% url 'portfolio_wedding' %}">Wedding</a></li>
                                 <li class="menu-item"><a href="{% url 'portfolio_quince' %}">Quinceaños</a></li>
                                 <li class="menu-item"><a href="{% url 'portfolio_portrait' %}">Portraits</a></li>
-                                <li class="menu-item"><a href="{% url 'portfolio_commercial' %}">Commercial</a></li>
+                                <li class="menu-item"><a href="{% url 'portfolio_grad' %}">Graduations</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -90,9 +101,12 @@
                         <ul class="sidebar_widget">
                             <li id="text-2" class="widget widget_text">
                                 <div class="textwidget">
-                                    <p><img src="{% static 'website/upload/about.jpg' %}" alt="" style="margin-bottom:10px;" />
-                                        <br /> Aliquam et elit eu nunc rhoncus viverra quis at felis et netus et malesuada fames ac turpis egestas. Aenean commodo ligula eget dolor. </p>
-                                    <div style="margin-top:30px;text-align:center;"><img src="{% static 'website/upload/signature_white.png' %}" style="width:170px;height: auto;" alt="Signature" /></div>
+                                    <!-- <p><img src="{% static 'website/upload/about.jpg' %}" alt="" style="margin-bottom:10px;" />
+                                        <br /> Aliquam et elit eu nunc rhoncus viverra quis at felis et netus et malesuada fames ac turpis egestas. Aenean commodo ligula eget dolor. </p> -->
+                                        <a href="{% url 'home' %}">
+                                            <div style="margin-top:30px;text-align:center;"><img src="{% static 'website/upload/logo/sidebar-logo-wht.png' %}" style="width:170px;height: auto;" alt="Signature" /></div>
+                                        </a>
+                                    
                                 </div>
                             </li>
                             <li id="grandportfolio_social_profiles_posts-4" class="widget grandportfolio_Social_Profiles_Posts">
@@ -140,16 +154,16 @@
 
                         <div id="logo_normal" class="logo_container">
                             <div class="logo_align">
-                                <a id="custom_logo" class="logo_wrapper hidden" href="index.html">
-                                    <img src="{$ static 'website/upload/logo@2x.png' $}" alt="" width="24" height="29" />
+                                <a id="custom_logo" class="logo_wrapper hidden" href="{% url 'home' %}">
+                                    <img src="{% static 'website/upload/logo/sidebar-logo-wht.png' %}" alt="" width="170" height="65" />
                                 </a>
                             </div>
                         </div>
 
                         <div id="logo_transparent" class="logo_container">
                             <div class="logo_align">
-                                <a id="custom_logo_transparent" class="logo_wrapper default" href="index.html">
-                                    <img src="{% static 'website/upload/logo@2x_white.png' %}" alt="" width="24" height="29" />
+                                <a id="custom_logo_transparent" class="logo_wrapper default" href="{% url 'home' %}">
+                                    <img src="{% static 'website/upload/logo/sidebar-logo-wht.png' %}" alt="" width="170" height="65" />
                                 </a>
                             </div>
                         </div>
@@ -165,13 +179,22 @@
                                                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                                                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
                                                 <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
+                                                
+                                                <!-- <li class=" menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="{% url 'services_photo' %}">Photography</a></li>
+                                                        <li class="menu-item"><a href="{% url 'services_film' %}">Film</a></li>
+                                                        <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a>
+                                                        </li>
+                                                    </ul>
+                                                </li> -->
 
-                                                <li class=" menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
+                                                <li class=" menu-item menu-item-has-children arrow"><a style="cursor: pointer;">Portfolio</a>
                                                     <ul class="sub-menu">
                                                         <li class="menu-item"><a href="{% url 'portfolio_wedding' %}">Wedding</a></li>
                                                         <li class="menu-item"><a href="{% url 'portfolio_quince' %}">Quinceaños</a></li>
                                                         <li class="menu-item"><a href="{% url 'portfolio_portrait' %}">Portraits</a></li>
-                                                        <li class="menu-item"><a href="{% url 'portfolio_commercial' %}">Commercial</a></li>
+                                                        <li class="menu-item"><a href="{% url 'portfolio_grad' %}">Graduations</a></li>
                                                     </ul>
                                                 </li>
 
@@ -223,7 +246,7 @@
             <div class="footer_bar_wrapper ">
                 <div class="social_wrapper">
                     <ul>
-                        <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                        <li class="facebook"><a target="_blank" href="https://www.facebook.com/NelsonsVP"><i class="fa fa-facebook-official"></i></a></li>
                         <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
                         <li class="flickr"><a target="_blank" title="Flickr" href="#"><i class="fa fa-flickr"></i></a></li>
                         <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
@@ -545,6 +568,21 @@
         }()); /* END OF WRAPPING FUNCTION */
     </script>
 
+    <script src='js/jquery.js'></script>
+    <script src='js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/plugins/masonry.pkgd.min.js'></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#ppb_header_video1566047043505021377").vide({
+                mp4: "upload/06.11.2014_Business_Radisson_blu-Linked-Comp-18.mp4.mp4",
+                webm: "upload/06.11.2014_Business_Radisson_blu-Linked-Comp-18.webmsd.webm",
+                ogv: "upload/06.11.2014_Business_Radisson_blu-Linked-Comp-18.oggtheora.ogv",
+                poster: "upload/video_poster.jpg",
+                volumne: 0
+            });
+        });
+    </script>
+    
 </body>
 </html>
 

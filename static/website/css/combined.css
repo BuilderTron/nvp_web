@@ -10959,6 +10959,7 @@ body.hover .page_slider .tp-rightarrow.default:hover {
     opacity: 1;
 }
 
+
 .portfolio_classic_icon_content {
     display: table;
     width: 100%;
@@ -11302,7 +11303,7 @@ body.hover .page_slider .tp-rightarrow.default:hover {
 }
 
 .one_fourth.gallery4.classic a:hover .portfolio_classic_icon_wrapper {
-    opacity: 1;
+    opacity: .3;
 }
 
 .one_fifth {
