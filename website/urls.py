@@ -20,6 +20,7 @@ urlpatterns = [
     path('portfolio_commercial', views.portfolio_commercial, name="portfolio_commercial"),
     path('portfolio_grad', views.portfolio_grad, name="portfolio_grad"),
     path('portfolio_maternity', views.portfolio_maternity, name="portfolio_maternity"),
+    path('portfolio_engagement', views.portfolio_engagement, name="portfolio_engagement"),
 
     # path('clients.html', views.clients, name="clients"),
     # path('blog', views.blog, name="blog"),

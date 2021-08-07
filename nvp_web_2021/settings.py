@@ -127,6 +127,23 @@ STATICFILES_DIRS = [
 ]
 
 
+#Send Email
+
+EMAIL_HOST = 'smtp.google.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nvp20events@gmail.com'
+EMAIL_HOST_PASSWORD = 'Tit@n2021'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
+
+
+
 # Base url to serve media files
 MEDIA_URL = '/media/'
 

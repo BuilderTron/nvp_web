@@ -4,146 +4,133 @@
 {% block content %}
 
 
+<div class="showcase">
+    <div class="vid-container">
+        <video autoplay muted loop>
+            <source src="{% static 'website/upload/contact/Contact-Us.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+    <div class="background_center_title_wrapper" style="z-index:3;position:relative;">
+        <div class="title_content">
+            {% if your_name %}
+                <h2 class="ppb_title" style="color:#ffffff;">Thank you {{your_name}}! </h2>
+                <br/> We will get back to you soon.
+            {% else %}
+                <h2 class="ppb_title" style="color:#ffffff;">We Can’t Wait to Work With You.</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
 
 
 
-        <div class="ppb_wrapper  ">
-            <div id="ppb_header_video1566047043505021377" class="one withsmallpadding ppb_header_video " style="text-align:center;padding:30px 0 30px 0;color:#ffffff;;height:75vh;position:relative;">
-                <div class="overlay_background_title" style="background-color: rgba(32, 10, 144, 0.75);"></div>
-                <div class="background_center_title_wrapper" style="z-index:3;position:relative;">
-                    <div class="title_content">
-                        <h2 class="ppb_title" style="color:#ffffff;">We Can’t Wait to Work With You.</h2>
-                        </div>
-                </div>
+
+
+
+
+
+
+
+<!-- <div class="ppb_wrapper  ">
+    <div id="ppb_header_video1566047043505021377" class="one withsmallpadding ppb_header_video "
+        style="text-align:center;padding:30px 0 30px 0;color:#ffffff;;height:75vh;position:relative;">
+        <div class="overlay_background_title" style="background-color: rgba(32, 10, 144, 0.75);">
+        </div>
+        <div class="background_center_title_wrapper" style="z-index:3;position:relative;">
+            <div class="title_content">
+                <h2 class="ppb_title" style="color:#ffffff;">We Can’t Wait to Work With You.</h2>
             </div>
         </div>
+    </div>
+</div> -->
 
-        <div class="one withsmallpadding ppb_text" style="padding:70px 0 70px 0;">
-            <div class="standard_wrapper">
-                <div class="page_content_wrapper">
-                    <div class="inner">
-                        <div style="margin:auto;width:80%">
-                            </p>
-                            <div style="text-align:center;">
-                                <h2>Connect With Us</h2>
-                            </div>
-                            <hr class="title_break center" />
-                            <p>
-                                Send us an email and we promise a human will get back to you ASAP. Or just give us a
-                                call! We look forward to being a part of your next event!
-                            </p>
-                            <p>
-                                <div id="reponse_msg_15660470431552212881" class="contact_form_response">
-                                    <ul></ul>
-                                </div>
-                                <form id="contact_form_15660470431552212881" class="contact_form_wrapper" method="post" action="/wp-admin/admin-ajax.php">
-                                    <input type="hidden" id="action" name="action" value="grandportfolio_contact_mailer" />
-                                    <label for="your_name">Name *</label>
-                                    <input id="your_name" name="your_name" type="text" class="required_field" placeholder="Name *" />
-                                    <label for="email">Email *</label>
-                                    <input id="email" name="email" type="text" class="required_field email" placeholder="Email *" />
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" name="message" rows="7" cols="10" class="required_field" style="width:98%;" placeholder="Message *"></textarea>
-                                    <br/>
-                                    <br/>
-                                    <div class="contact_submit_wrapper">
-                                        <input id="contact_submit_btn15660470431552212881" name="contact_submit_btn15660470431552212881" type="submit" class="solidbg" value="Send" />
-                                    </div>
-                                </form>
-                                <br class="clear" />
-                        </div>
+<div class="one withsmallpadding ppb_text" style="padding:70px 0 70px 0;">
+    <div class="standard_wrapper">
+        <div class="page_content_wrapper">
+            <div class="inner">
+                <div style="margin:auto;width:80%">
+                    </p>
+                    <div style="text-align:center;">
+                        <h2>Connect With Us</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider one">&nbsp;</div>
-        <div class="one_half_bg withsmallpadding ppb_text withbg " style="text-align:center;font-size:22px;background-image:url(upload/photo-1451153378752-16ef2b36ad05.jpg);background-position: center center;padding:100px 0 100px 0;position:relative;color:#ffffff !important;">
-            <div class="overlay_background_title" style="background-color: rgba(0, 0, 0, 0.4);"></div>
-            <div class="page_content_wrapper" style="z-index:2;position:relative;">
-                <div class="inner">
-                    </p>
-                    <h2 style="color:#fff;">New York</h2>
+                    <hr class="title_break center" />
+                    <p>
+                        Send us an email and we promise a human will get back to you ASAP. Or just give us a
+                        call! We look forward to being a part of your next event!
                     </p>
                     <p>
-                        78 Collective Street
-                        <br /> Manhattan
-                        <br /> Kingston
-                        <br /> United State
-                    </p>
-                    <p>
-                </div>
-            </div>
-        </div>
-        <div class="one_half_bg withsmallpadding ppb_text withbg " style="text-align:center;font-size:22px;background-image:url(upload/d287f3eb.jpg);background-position: center center;padding:100px 0 100px 0;position:relative;color:#ffffff !important;">
-            <div class="overlay_background_title" style="background-color: rgba(0, 0, 0, 0.4);"></div>
-            <div class="page_content_wrapper" style="z-index:2;position:relative;">
-                <div class="inner">
-                    </p>
-                    <h2 style="color:#fff;">London</h2>
-                    </p>
-                    <p>
-                        732/21 Second Street
-                        <br /> King Street
-                        <br /> Kingston
-                        <br /> United Kingdom
-                    </p>
-                    <p>
+                        <div id="reponse_msg_15660470431552212881" class="contact_form_response">
+                            <ul></ul>
+                        </div>
+                        <form id="contact_form_15660470431552212881" class="contact_form_wrapper" method="post"
+                            action="{% url 'contact' %}">
+                            {% csrf_token %}
+                            <input type="hidden" id="action" name="action" value="grandportfolio_contact_mailer" />
+                            <label for="your_name">Name *</label>
+                            <input id="your_name" name="your_name" type="text" class="required_field"
+                                placeholder="Name *" />
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="text" class="required_field email"
+                                placeholder="Email *" />
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="7" cols="10" class="required_field"
+                                style="width:98%;" placeholder="Message *"></textarea>
+                            <br />
+                            <br />
+                            <div class="contact_submit_wrapper">
+                                <input id="contact_submit_btn15660470431552212881"
+                                    name="contact_submit_btn15660470431552212881" type="submit" class="solidbg"
+                                    value="Send" />
+                            </div>
+                        </form>
+                        <br class="clear" />
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="footer_bar  ">
-
-        <div id="footer" class="">
-            <ul class="sidebar_widget four">
-                <li id="text-2" class="widget widget_text">
-                    <h2 class="widgettitle"><span>New York</span></h2>
-                    <div class="textwidget">
-                        <p>78 Collective Street
-                            <br /> Manhattan
-                            <br /> Kingston
-                            <br /> United State</p>
-                    </div>
-                </li>
-                <li id="text-3" class="widget widget_text">
-                    <h2 class="widgettitle"><span>London</span></h2>
-                    <div class="textwidget">
-                        <p>732/21 Second Street
-                            <br /> King Street
-                            <br /> Kingston
-                            <br /> United Kingdom</p>
-                    </div>
-                </li>
-                <li id="text-4" class="widget widget_text">
-                    <h2 class="widgettitle"><span>California</span></h2>
-                    <div class="textwidget">
-                        <p>78 Collective Street
-                            <br /> Manhattan
-                            <br /> Kingston
-                            <br /> United State</p>
-                    </div>
-                </li>
-                <li id="text-5" class="widget widget_text">
-                    <h2 class="widgettitle"><span>Contact Us</span></h2>
-                    <div class="textwidget">
-                        <p>mail@grandportfolio.com
-                            <br /> +78 (0) 231 908 1433</p>
-                        <div class="social_wrapper shortcode dark large">
-                            <ul>
-                                <li class="facebook"><a target="_blank" title="Facebook" href="#"><i class="fa fa-facebook-official"></i></a></li>
-                                <li class="twitter"><a target="_blank" title="Twitter" href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
-                                <li class="dribbble"><a target="_blank" title="Dribbble" href="http://dribbble.com/#"><i class="fa fa-dribbble"></i></a></li>
-                                <li class="pinterest"><a target="_blank" title="Pinterest" href="http://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li>
-                                <li class="instagram"><a target="_blank" title="Instagram" href="http://instagram.com/envato"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+<div class="divider one">&nbsp;</div>
+<div class="one_half_bg withsmallpadding ppb_text withbg "
+    style="text-align:center;font-size:22px;background-image:url(upload/photo-1451153378752-16ef2b36ad05.jpg);background-position: center center;padding:100px 0 100px 0;position:relative;color:#ffffff !important;">
+    <div class="overlay_background_title" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+    <div class="page_content_wrapper" style="z-index:2;position:relative;">
+        <div class="inner">
+            </p>
+            <h2 style="color:#fff;">Nelson Lopez</h2>
+            </p>
+            <p>
+                nvp20events@gmail.com
+                <br /> 281-726-8814
+                <br />
+                <br />
+            </p>
+            <p>
         </div>
-        <br class="clear" />
+    </div>
+</div>
+<div class="one_half_bg withsmallpadding ppb_text withbg "
+    style="text-align:center;font-size:22px;background-image:url(upload/d287f3eb.jpg);background-position: center center;padding:100px 0 100px 0;position:relative;color:#ffffff !important;">
+    <div class="overlay_background_title" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+    <div class="page_content_wrapper" style="z-index:2;position:relative;">
+        <div class="inner">
+            </p>
+            <h2 style="color:#fff;">Diana Lopez</h2>
+            </p>
+            <p>
+                Diana20Lopez13@gmail.com
+                <br /> 832-792-9865
+                <br />
+                <br />
+            </p>
+            <p>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
 
 
 

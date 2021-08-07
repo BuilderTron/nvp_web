@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.mail import send_mail
 from .models import HeroSlide, Service, Event
 from blog.models import Blog
 
@@ -57,6 +58,9 @@ def portfolio_grad(request):
 def portfolio_maternity(request):
     return render(request, 'home/portfolio_maternity.html', {})
 
+def portfolio_engagement(request):
+    return render(request, 'home/portfolio_engagement.html', {})
+
 
 
 
@@ -74,7 +78,23 @@ def sin_blog(request, blog_id):
 
 
 def contact(request):
-    return render(request, 'home/contact.html', {})
+    if request.method == "POST":
+        your_name = request.POST['your_name']
+        email = request.POST['email']
+        message = request.POST['message']
+# Send Email
+        send_mail(
+            'NVP Web: ' + your_name,#subject
+            message,  # messasge
+            email,  # from email
+            ['nvp20events@gmail.com'],  # to email
+            fail_silently=False,
+        )
+
+        return render(request, 'home/contact.html', {'your_name': your_name})
+
+    else:
+        return render(request, 'home/contact.html', {})
 
 
 
