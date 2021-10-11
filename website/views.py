@@ -82,12 +82,14 @@ def contact(request):
         your_name = request.POST['your_name']
         email = request.POST['email']
         message = request.POST['message']
+
+        msg_mail = "Name: " + str(your_name) + "\n\nEmail: " + str(email) + "\n\nMessage: " + str(message)
 # Send Email
         send_mail(
-            'NVP Web: ' + your_name,#subject
-            message,  # messasge
-            email,  # from email
-            ['nvp20events@gmail.com'],  # to email
+            'NVP Web: ' + your_name,
+            msg_mail,
+            email,
+            ['nvp20events@gmail.com'],
             fail_silently=False,
         )
 
@@ -100,5 +102,5 @@ def contact(request):
 
 # Test page for models and forms
 def test(request):
-    
+
     return render(request, 'home/test.html', {})

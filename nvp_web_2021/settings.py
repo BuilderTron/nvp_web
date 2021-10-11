@@ -28,7 +28,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['nelsonsvp.com', 'www.nelsonsvp.com']
 
 # 'nelsonsvp.com', 'www.nelsonsvp.com'
-
+# 'NVPJose.pythonanywhere.com'
 
 # Application definition
 
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'blog',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -142,18 +142,14 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 #Send Email
 
-EMAIL_HOST = 'smtp.google.com'
-EMAIL_PORT = 587
+
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'nvp20events@gmail.com'
-EMAIL_HOST_PASSWORD = 'Tit@n2021'
+EMAIL_HOST_PASSWORD = 'kntytgctdrebrjqa'
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-# EMAIL_HOST = 'localhost'
-# EMAIL_PORT = 1025
-# EMAIL_HOST_USER = ''
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_USE_TLS = False
 
 
 
