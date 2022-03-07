@@ -1,10 +1,14 @@
-{% extends "home/base.html" %} {% load static %} {% block content %}
+{% extends "home/base.html" %}
 
-<div id="page_caption" class="hasbg parallax">
-    <div id="bg_regular" style="
-        background-image: url('{% static 'website/upload/content_big_image_27.jpg' %}');
-    "></div>
+{% load static %} 
+{% block content %}
+
+<div class="ppb_wrapper  ">
+    <div id="page_caption" class="hasbg parallax">
+        <div id="bg_regular" style="background-image:url('{% static 'website/upload/services/photo/pic.jpg' %}'); background-position: center top; color:#ffffff;"></div>
+    </div>
 </div>
+
 
 <!-- Begin content -->
 <div id="page_content_wrapper" class="hasbg">
@@ -24,30 +28,19 @@
                         <div class="post_content_wrapper">
                             <div class="post_header">
                                 <div class="post_excerpt">
-                                    Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum
-                                    dolor sit amet, consectetur Nulla fringilla purus at leo
-                                    dignissim congue. Mauris elementum accumsan leo vel tempor.
-                                    Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus
-                                    viverra quis at felis. Sed do.Lorem ipsum dolor sit amet,
-                                    consectetur Nulla fringilla purus Lorem ipsum dosectetur
-                                    adipisicing elit at leo dignissim congue. Mauris elementum
-                                    accumsan leo vel tempor.
+                                    With over 30 years of experience, we know the ins and outs of every event. Trust in us to maintain an organized schedule, effective and responsive communication, and quality professionalism from beginning to end.
                                 </div>
                                 <div class="post_excerpt animate">
                                     <blockquote>
                                         <p>
-                                            Good design is making something intelligible and
-                                            memorable.
+                                            GREAT PHOTOGRAPHY ISN’T GOOD ENOUGH.
                                             <br />
-                                            Great design is making something memorable and meaningful.
+                                            YOUR MOMENTS ARE WORTH EXCELLENCE AND THAT IS WHAT WE AIM TO PROVIDE.
                                         </p>
                                     </blockquote>
                                 </div>
                                 <div class="post_excerpt">
-                                    Aliquam et elit eu nunc rhoncus viverra quis at felis et netus
-                                    et malesuada fames ac turpis egestas. Aenean commodo ligula
-                                    eget dolor. Aenean massa. Cum sociis natoque penatibus et
-                                    magnis dis parturient montes
+                                    High Quality and Hard Work are just a few things you can come to expect as we work for you on your next event. During each event we make sure to record all the presentations, dancing, food, laughter, and good times.
                                 </div>
                                 
                             </div>
@@ -78,7 +71,7 @@
                         <div class="pricing one_third">
                             <div class="pricing_wrapper_border">
                                 <ul class="pricing_wrapper">
-                                    <li class="title_row" style="color: #222222">Mini Collection</li>
+                                    <li class="title_row" style="color: #222222"> Abridged Collection</li>
                                     <li class="price_row">
                                         <strong>$</strong><em class="exact_price" style="color: #222222">1400</em><em
                                             class="time"></em>
@@ -86,14 +79,19 @@
                                     <li>Half Day Event</li>
                                     <li>1 Photographer</li>
                                     <li>1 Location</li>
-                                    <li>Event Photo Book</li>
+                                    <li>8x8 Event Photo Book</li>
                                     <li>Up to 200 High-res Images on USB</li>
                                     <li>1- 11x14 (Canvas or Framed)</li>
                                     <li>2- 5x7 Prints</li>
                                     <li></li>
                                     <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    
                                     <li class="button_row">
-                                        <a href="#" class="button" style="
+                                        <a href="{% url 'contact' %}" class="button" style="
                         background: #222222;
                         border-color: #222222;
                         color: #fff;
@@ -106,7 +104,7 @@
                             <div class="pricing_wrapper_border">
                                 <ul class="pricing_wrapper">
                                     <li class="title_row featured" style="color: #222222">
-                                        Collection
+                                        Established Collection
                                     </li>
                                     <li class="price_row">
                                         <strong>$</strong><em class="exact_price" style="color: #222222">1800</em><em
@@ -114,14 +112,17 @@
                                     </li>
                                     <li>Full Day Event</li>
                                     <li>1 Photographer</li>
+                                    <li>3 Locations</li>
                                     <li>Photo Session before Event</li>
                                     <li>8x8 Signature Book of Photo Session</li>
                                     <li>10x12 Event Photo Book</li>
                                     <li>Up to 500 High-res Images on USB</li>
                                     <li>1- 11x14 (Canvas or Framed)</li>
-                                    <li>2- 8x10 (Canvas or Framed)</li>
+                                    <li>2- 8x10 Prints</li>
+                                    <li></li>
+                                    <li></li>
                                     <li class="button_row featured">
-                                        <a href="#" class="button" style="
+                                        <a href="{% url 'contact' %}" class="button" style="
                         background: #222222;
                         border-color: #222222;
                         color: #fff;
@@ -140,14 +141,16 @@
                                     </li>
                                     <li>Full Day Event</li>
                                     <li>2 Photographers</li>
+                                    <li>3 Locations</li>
                                     <li>Photo Session before Event</li>
                                     <li>8x8 Signature Book of Photo Session</li>
                                     <li>10x12 Event Photo Book</li>
                                     <li>Up to 1000 High-res Images on USB</li>
                                     <li>1- 11x14 (Canvas or Framed)</li>
-                                    <li>2- 8x10 (Canvas or Framed)</li>
+                                    <li>4- 8x10 Prints</li>
+                                    <li>2- 5x7 Prints</li>
                                     <li class="button_row">
-                                        <a href="#" class="button" style="
+                                        <a href="{% url 'contact' %}" class="button" style="
                         background: #222222;
                         border-color: #222222;
                         color: #fff;
@@ -269,9 +272,9 @@
                     <div class="inner">
                         <div style="margin:auto;width:100%">
 
-                            <h5 class="bold">USB Media</h5>
+                            <h5 class="bold">1- Extra USB Media</h5>
                             <p>
-                                $300
+                                $50
                             </p>
                         </div>
                     </div>
@@ -280,8 +283,192 @@
         </div>
     </div>
 
-    <div class="parallax" data-image="upload/photo-1446127281790-166e52d1b73c.jpg" data-width="1440" data-height="961"
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">2 - 5x7 Prints</h5>
+                            <p>
+                                $100
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">1 - 8x10 Print</h5>
+                            <p>
+                                $100
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="standard_wrapper">
+        <div class="one_third last withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">1 - 11x14 (Canvas or Framed)</h5>
+                            <p>
+                                $400
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="parallax" data-image="{% static 'website/upload/services/photo/rings.jpg' %}" data-width="1440" data-height="961"
         style="height: 600px">
+    </div>
+
+    <div class="one withsmallpadding ppb_text"
+        style="padding-bottom: 0 !important;text-align:center;padding:50px 0 50px 0;">
+        <div class="standard_wrapper">
+            <div class="page_content_wrapper">
+                <div class="inner">
+                    <div style="margin:auto;width:100%">
+                        </p>
+                        <h3>How we Capture your Special Event</h3>
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding-bottom: 0 !important;padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">Consultation & Flexibility</h5>
+                            <p style="font-size:15px">
+                                Our first step to any event is to establish a friendship.
+                                We want to get to know you, to know what you like and what your expectations are so that we can plan your event with utmost flexibilty. 
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding-bottom: 0 !important;padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">Before the Event Photoshoot</h5>
+                            <p>
+                                Want a photo in the perfect place? We’ve got you covered! Natural setting
+                                photography, like a fountain in a park or field full of flowers, makes a dramatic
+                                statement to share with friends and family. Our adept team knows just what to do to
+                                pose you and your party in any outdoor setting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third last withsmallpadding ppb_text"
+            style="padding-bottom: 0 !important;padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">THE MORNING OF YOUR EVENT</h5>
+                            <p>
+                                Our team of professionals will arrive in the morning to capture any transformation. From the glimpses of hair and makeup to organic and intimate moments of family and friends getting ready. Taking photos and video of the dress, shoes, and accessories as the big day begins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">Event Venue Photography</h5>
+                            <p>
+                                From the table tops to the centerpiece, every detail is a reflection of our clients
+                                vision and dream. Before you even arrive, we film and photograph every venue’s
+                                decor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">During Your Event</h5>
+                            <p>
+                                High Quality and Hard Work are just a few things you can come to expect as we work
+                                for you on your next event. During each event we make sure to capture all the
+                                presentations, dancing, food, laughter, and good times.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="standard_wrapper">
+        <div class="one_third last withsmallpadding ppb_text" style="padding:50px 0 50px 0;">
+            <div class="standard_wrapper">
+                <div class="page_content_wrapper">
+                    <div class="inner">
+                        <div style="margin:auto;width:100%">
+
+                            <h5 class="bold">After Your Event</h5>
+                            <p>
+                                Our team will expertly edit, adjust, and compile the film and video from your
+                                special day into any package of your choosing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -298,89 +485,11 @@
 
                         <p>&nbsp;</p>
                         <div class="video-container">
-                            <iframe
-                                src="https://player.vimeo.com/video/147196782?title=0&amp;byline=0&amp;portrait=0"
-                                width="1425" height="534" frameborder="0" webkitallowfullscreen=""
-                                mozallowfullscreen="" allowfullscreen="">
-                            </iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/hpnUHXnJYIU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <p>&nbsp;</p>
 
-                        <h6 class="subtitle"><span>You might also like</span></h6>
-                            <hr class="title_break" />
-
-                        <div class="post_related">
-                                <div class="one_third">
-                                    <!-- Begin each blog post -->
-                                    <div id="post-4423"
-                                        class="post-4423 post type-post status-publish format-standard has-post-thumbnail hentry category-photography category-travel tag-blog tag-city tag-street tag-street-photography-2">
-                                        <div class="post_wrapper grid_layout">
-                                            <div class="post_img small static">
-                                                <a href="#">
-                                                    <img src="{% static 'website/upload/photo-1444072934215-c426fc67ab9c-960x636.jpg' %}"
-                                                        alt="" class="" style="width: 960px; height: 636px" />
-                                                </a>
-                                            </div>
-
-                                            <div class="blog_grid_content">
-                                                <div class="post_header grid related">
-                                                    <strong><a href="#" title="Awesome Support">Awesome
-                                                            Support</a></strong>
-                                                    <div class="post_info_cat">September 1, 2015</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End each blog post -->
-                                </div>
-                                <div class="one_third">
-                                    <!-- Begin each blog post -->
-                                    <div id="post-4417"
-                                        class="post-4417 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-photography tag-fashion tag-model tag-portrait-2 tag-street-photography-2">
-                                        <div class="post_wrapper grid_layout">
-                                            <div class="post_img small static">
-                                                <a href="#">
-                                                    <img src="{% static 'website/upload/photo-1445968660880-120e2f7b8c33-960x636.jpg' %}"
-                                                        alt="" class="" style="width: 960px; height: 636px" />
-                                                </a>
-                                            </div>
-
-                                            <div class="blog_grid_content">
-                                                <div class="post_header grid related">
-                                                    <strong><a href="#" title="Latest WordPress Support">Latest
-                                                            WordPress Support</a></strong>
-                                                    <div class="post_info_cat">September 1, 2015</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End each blog post -->
-                                </div>
-                                <div class="one_third last">
-                                    <!-- Begin each blog post -->
-                                    <div id="post-1135"
-                                        class="post-1135 post type-post status-publish format-standard has-post-thumbnail hentry category-travel tag-blog tag-city tag-landscape-2 tag-portrait-2 tag-street-photography-2">
-                                        <div class="post_wrapper grid_layout">
-                                            <div class="post_img small static">
-                                                <a href="#">
-                                                    <img src="{% static 'website/upload/photo-1445052858312-134745f190f2-960x636.jpg' %}"
-                                                        alt="" class="" style="width: 960px; height: 636px" />
-                                                </a>
-                                            </div>
-
-                                            <div class="blog_grid_content">
-                                                <div class="post_header grid related">
-                                                    <strong><a href="#" title="Standard Blog Post">Standard Blog
-                                                            Post</a></strong>
-                                                    <div class="post_info_cat">June 26, 2013</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End each blog post -->
-                                </div>
-                            </div>
-                            <hr class="title_break" />
+                        
 
                     </div>
                 </div>
