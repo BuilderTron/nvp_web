@@ -1720,7 +1720,7 @@
     }
 
     .top_bar.scroll .logo_wrapper img {
-        max-height: 40px;
+        max-height: 65px;
     }
 
     .footer_before_widget .footer_logo.logo_wrapper img {
@@ -3346,7 +3346,7 @@
     }
 
     html[data-menu=leftalign_center] .top_bar.withtopbar #logo_wrapper .logo_container {
-        top: 40px;
+        top: 65px;
     }
 
     .fullscreen_portfolios {

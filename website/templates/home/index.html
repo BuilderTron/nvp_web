@@ -48,12 +48,18 @@
                 <div class="page_content_wrapper">
                     <div class="inner">
                         <div style="margin:auto;width:100%">
-                            <h2>Photography</h2>
+                            <a href="{% url 'services_photo' %}">
+                                <h2>Photography</h2>
+                            </a>
                             <p>
+                            <a href="{% url 'services_photo' %}">
                                 <img src="{% static 'website/upload/home/services/photo.jpg' %}" alt="" />
-                                <br>
+                            </a>
+                            <br>
+                            <a href="{% url 'services_photo' %}">
                                 Whether it’s the moment you say “I do!” or the moment your family gathers on the
                                 dance floor to bust a move, rest assured we capture quality images that last a lifetime!
+                            </a>
                             </p>
                         </div>
                     </div>
@@ -67,12 +73,18 @@
                 <div class="page_content_wrapper">
                     <div class="inner">
                         <div style="margin:auto;width:100%">
-                            <h2>Film</h2>
+                            <a href="{% url 'services_film' %}">
+                                <h2>Film</h2>
+                            </a>
                             <p>
-                                <img src="{% static 'website/upload/home/services/Film2.jpg' %}" alt="" />
+                                <a href="{% url 'services_film' %}">
+                                    <img src="{% static 'website/upload/home/services/Film2.jpg' %}" alt="" />
+                                </a>
                                 <br>
-                                Special moments in life are worth seeing again and again. Trust in our team to make
-                                your big and little moments a movie worth a 5 star rating!
+                                <a href="{% url 'services_film' %}">
+                                    Special moments in life are worth seeing again and again. Trust in our team to make
+                                    your big and little moments a movie worth a 5 star rating!
+                                </a>
                             </p>
                         </div>
                     </div>
