@@ -1,0 +1,243 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Wedding & XV | NVP Links</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="description" content="Nelson's Video & Photography Web & Social Media Links." />
+	
+	<!-- fontawesome CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+	
+	<!-- fonts googleapis CSS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet">
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'link_page/css/bootstrap.min.css'%}">
+	
+	<!-- CSS STYLES -->
+	<link rel="stylesheet" href="{% static 'link_page/css/animate.css'%}">
+	<link rel="stylesheet" href="{% static 'link_page/css/magnific-popup.css'%}">
+	<link rel="stylesheet" href="{% static 'link_page/css/splitting.css'%}">
+	<link rel="stylesheet" href="{% static 'link_page/css/swiper.css'%}">
+	<link rel="stylesheet" href="{% static 'link_page/css/main.css'%}">
+	
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{% static 'website/upload/NVP Fav.png' %}" type="image/x-icon">
+	<link rel="icon" href="{% static 'website/upload/NVP Fav.png' %}" type="image/x-icon">
+
+</head>
+
+<body>
+	<div class="page">
+
+		<!-- Preloader -->
+		<div class="preloader">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="spinner"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Header -->
+		<header class="header">
+		
+			<!-- Navbar -->
+			<div class="navbar">
+		
+				<!-- logo -->
+				<div class="logo">
+					<a href="{% url 'home' %}"><img src="{% static 'website/upload/logo/sidebar-logo-wht.png' %}" alt="" /></a>
+				</div>
+		
+				
+		
+			</div>
+		
+			
+		
+		</header>
+		
+		<!-- Wrapper -->
+		<div class="wrapper">
+
+			<!-- Section Works Carousel -->
+			<div class="section m-works-carousel">
+				<div class="container">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							{% for link in links %}
+
+							<!-- slide -->
+							<div class="swiper-slide">
+								<!-- works slide -->
+								<div class="works-slide">
+									<a href="{{ link.url }}">
+										<span class="image">
+											<span class="img">
+												<span class="slide" style="background-image: url('{{ link.imageBG.url }}');">
+												</span>
+											</span>
+										</span>
+										<span class="desc">
+											<span class="name splitting-text-anim-1" data-splitting="chars">{{ link.title }}</span>
+										</span>
+									</a>
+								</div>
+							</div>
+							
+
+							{% comment %} <!-- slide -->
+							<div class="swiper-slide">
+								{{ link.description }}
+{{ link.title }}
+								<!-- works slide -->
+								<div class="works-slide">
+									<a href="work-single-v2.html">
+										<span class="image">
+											<span class="img">
+												<span class="slide" style="background-image: url(images/works_slide2.jpg);"></span>
+											</span>
+										</span>
+										<span class="desc">
+											<span class="name splitting-text-anim-1" data-splitting="chars">
+												Portrait
+											</span>
+										</span>
+									</a>
+								</div>
+
+							</div>
+
+							<!-- slide -->
+							<div class="swiper-slide">
+
+								<!-- works slide -->
+								<div class="works-slide">
+									<a href="work-single.html">
+										<span class="image">
+											<span class="img">
+												<span class="slide" style="background-image: url(images/works_slide3.jpg);"></span>
+											</span>
+										</span>
+										<span class="desc">
+											<span class="name splitting-text-anim-1" data-splitting="chars">
+												Fashion
+											</span>
+										</span>
+									</a>
+								</div>
+
+							</div>
+
+							<!-- slide -->
+							<div class="swiper-slide">
+
+								<!-- works slide -->
+								<div class="works-slide">
+									<a href="work-single-v2.html">
+										<span class="image">
+											<span class="img">
+												<span class="slide" style="background-image: url(images/works_slide4.jpg);"></span>
+											</span>
+										</span>
+										<span class="desc">
+											<span class="name splitting-text-anim-1" data-splitting="chars">
+												Architectural
+											</span>
+										</span>
+									</a>
+								</div>
+
+							</div>
+
+							<!-- slide -->
+							<div class="swiper-slide">
+
+								<!-- works slide -->
+								<div class="works-slide">
+									<a href="work-single.html">
+										<span class="image">
+											<span class="img">
+												<span class="slide" style="background-image: url(images/works_slide5.jpg);"></span>
+											</span>
+										</span>
+										<span class="desc">
+											<span class="name splitting-text-anim-1" data-splitting="chars">
+												Sports
+											</span>
+										</span>
+									</a>
+								</div>
+
+							</div> {% endcomment %}
+							{% endfor %}
+						</div>
+					
+
+						<!-- navigation buttons -->
+						<div class="swiper-buttons">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<!-- cursor --> 
+	<div class="cursor"></div>
+
+	<!-- Scripts -->{% static 'link_page/js/script.js'%}
+	<script src="{% static 'link_page/js/jquery.min.js'%}"></script>
+	<script src="{% static 'link_page/js/bootstrap.bundle.min.js'%}"></script>
+	<script src="{% static 'link_page/js/jquery.validate.min.js'%}"></script>
+	<script src="{% static 'link_page/js/swiper.min.js'%}"></script>
+	<script src="{% static 'link_page/js/splitting.min.js'%}"></script>
+	<script src="{% static 'link_page/js/TweenMax.min.js'%}"></script>
+	<script src="{% static 'link_page/js/pixi.min.js'%}"></script>
+	<script src="{% static 'link_page/js/cursor.js'%}"></script>
+	<script src="{% static 'link_page/js/magnific-popup.js'%}"></script>
+	<script src="{% static 'link_page/js/imagesloaded.pkgd.js'%}"></script>
+	<script src="{% static 'link_page/js/isotope.pkgd.js'%}"></script>
+	<script src="{% static 'link_page/js/jquery.scrolla.js'%}"></script>
+	<script src="{% static 'link_page/js/skrollr.js'%}"></script>
+	<script src="{% static 'link_page/js/main-slider.js'%}"></script>
+	<script src="{% static 'link_page/js/full-slider.js'%}"></script>
+	<script src="{% static 'link_page/js/half-slider.js'%}"></script>
+	<script src="{% static 'link_page/js/ex-slider.js'%}"></script>
+	<script src="{% static 'link_page/js/hero-started.js'%}"></script>
+	<script src="{% static 'link_page/js/script.js'%}"></script>
+	<!--<script src="js/lazysizes.min.js" async=""></script>
+	<script>
+		/*Lazy*/
+		document.addEventListener('lazybeforeunveil', function(e){
+			var bg = e.target.getAttribute('data-bg');
+			if(bg){
+				e.target.style.backgroundImage = 'url(' + bg + ')';
+			}
+		});
+	</script>-->
+
+</body>
+</html>
+
