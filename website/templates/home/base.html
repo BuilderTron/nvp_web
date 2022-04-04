@@ -37,6 +37,17 @@
     <link rel="apple-touch-icon-precomposed" href="{% static 'website/upload/NVP Fav.png' %}" />
     <meta name="msapplication-TileImage" content="{% static 'website/upload/NVP Fav.png' %}" />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-222588678-1">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-222588678-1');
+    </script>
+
 </head>
 
 
@@ -63,18 +74,13 @@
             <ul id="mobile_main_menu" class="mobile_main_nav">
                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
-                <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
-                <!-- <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
                     <ul class="sub-menu">
-                        <li class="menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
-                            <ul class="sub-menu">
                                 <li class="menu-item"><a href="{% url 'services_photo' %}">Photography</a></li>
                                 <li class="menu-item"><a href="{% url 'services_film' %}">Film</a></li>
-                                <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a></li>
-                            </ul>
-                        </li>
+                                {% comment %} <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a></li> {% endcomment %}
                     </ul>
-                </li> -->
+                </li>
                 <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-has-children arrow">
@@ -181,16 +187,16 @@
                                             <ul id="main_menu" class="nav">
                                                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                                                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
-                                                <li class="menu-item"><a href="{% url 'services' %}">Services</a></li>
+                                                {% comment %} <li class="menu-item"><a href="{% url 'services' %}">Services</a></li> {% endcomment %}
 
-                                                <!-- <li class=" menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                                                <li class=" menu-item menu-item-has-children arrow"><a style="cursor: pointer;">Services</a>
                                                     <ul class="sub-menu">
                                                         <li class="menu-item"><a href="{% url 'services_photo' %}">Photography</a></li>
                                                         <li class="menu-item"><a href="{% url 'services_film' %}">Film</a></li>
-                                                        <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a>
-                                                        </li>
+                                                        {% comment %} <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a>
+                                                        </li> {% endcomment %}
                                                     </ul>
-                                                </li> -->
+                                                </li>
 
                                                 <li class=" menu-item menu-item-has-children arrow"><a style="cursor: pointer;">Portfolio</a>
                                                     <ul class="sub-menu">
