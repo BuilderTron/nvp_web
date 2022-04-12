@@ -20,7 +20,7 @@
     <link rel='stylesheet' href="{% static 'website/css/ilightbox.css'%}" type='text/css' media='all' />
     <link rel='stylesheet' href="{% static 'website/css/combined.css'%}" type='text/css' media='all' />
     <link rel='stylesheet' href="{% static 'website/css/leftalignmenu.css'%}" type='text/css' media='all' />
-    <link rel='stylesheet' href="{% static 'website/css/font-awesome.min.css'%}" type='text/css' media='all' />
+    {% comment %} <link rel='stylesheet' href="{% static 'website/css/font-awesome.min.css'%}" type='text/css' media='all' /> {% endcomment %}
     <link rel='stylesheet' href="{% static 'website/css/custom-css.css'%}" type='text/css' media='all' />
     <link rel='stylesheet' href="{% static 'website/css/responsive.css'%}" type='text/css' media='all' />
     <link rel='stylesheet' href="{% static 'website/css/kirki-styles.css'%}" type='text/css' media='all' />
@@ -30,6 +30,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Karla%7CPlayfair+Display%7CVarela+Round&#038;subset' type='text/css' media='all' />
     <link href="http://fonts.googleapis.com/css?family=Karla:700" rel="stylesheet" property="stylesheet" type="text/css" media="all">
 
+    <script src="https://kit.fontawesome.com/6178ae7d52.js" crossorigin="anonymous"></script>
 
 
     <link rel="icon" href="{% static 'website/upload/NVP Fav.png' %}" sizes="32x32" />
@@ -74,14 +75,14 @@
             <ul id="mobile_main_menu" class="mobile_main_nav">
                 <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="{% url 'home' %}">Home</a></li>
                 <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
-                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'services' %}">Services</a>
+                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="">Services</a>
                     <ul class="sub-menu">
                                 <li class="menu-item"><a href="{% url 'services_photo' %}">Photography</a></li>
                                 <li class="menu-item"><a href="{% url 'services_film' %}">Film</a></li>
                                 {% comment %} <li class="menu-item"><a href="{% url 'services_corporate' %}">Corporate</a></li> {% endcomment %}
                     </ul>
                 </li>
-                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="{% url 'portfolio' %}">Portfolio</a>
+                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="">Portfolio</a>
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-has-children arrow">
                             <ul class="sub-menu">
@@ -91,6 +92,16 @@
                                 <li class="menu-item"><a href="{% url 'portfolio_portrait' %}">Portraits</a></li>
                                 <li class="menu-item"><a href="{% url 'portfolio_maternity' %}">Maternity</a></li>
                                 <li class="menu-item"><a href="{% url 'portfolio_grad' %}">Graduations</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="megamenu col1 menu-item menu-item-has-children arrow"><a href="">Client</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-has-children arrow">
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="https://nelsonsvideophotography.zenfoliosite.com/">Galleries</a></li>
+                                {% comment %} <li class="menu-item"><a href="{% url 'portfolio_engagement' %}">Portal</a></li> {% endcomment %}
                             </ul>
                         </li>
                     </ul>
@@ -121,8 +132,11 @@
                                 <div class="textwidget">
                                     <div class="social_wrapper shortcode light small">
                                         <ul>
-                                            <li class="facebook"><a target="_blank" title="Facebook" href="https://www.facebook.com/NelsonsVP"><i class="fa fa-facebook-official"></i></a></li>
-                                            <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/nelsons_vp?utm_medium=copy_link"><i class="fa fa-instagram"></i></a></li>
+                                            <li class="links"><a title="Social Media Links" href="https://www.nelsonsvp.com/link_page/"><i class="fa-solid fa-timeline"></i></a></li>
+                                            <li class="facebook"><a target="_blank" title="Facebook" href="https://www.facebook.com/NelsonsVP"><i class="fa-brands fa-facebook"></i></a></li>
+                                            <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/nelsons_vp?utm_medium=copy_link"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li class="youtube"><a target="_blank" title="YouTube" href="https://www.youtube.com/channel/UCHMinaSDQ4R5X8187zlWNQg"><i class="fa-brands fa-youtube"></i></a></li>
+                                            <li class="tiktok"><a target="_blank" title="TikTok" href="https://www.tiktok.com/@nelsons_vp?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a></li>
                                             <!-- <li class="twitter"><a target="_blank" title="Twitter" href="http://twitter.com/#"><i class="fa fa-twitter"></i></a></li>
                                             <li class="flickr"><a target="_blank" title="Flickr" href="http://flickr.com/people/#"><i class="fa fa-flickr"></i></a></li>
                                             <li class="pinterest"><a target="_blank" title="Pinterest" href="http://pinterest.com/#"><i class="fa fa-pinterest"></i></a></li> -->
@@ -209,6 +223,13 @@
                                                     </ul>
                                                 </li>
 
+                                                <li class=" menu-item menu-item-has-children arrow"><a style="cursor: pointer;">Client</a>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item"><a href="https://nelsonsvideophotography.zenfoliosite.com/">Galleries</a></li>
+                                                        {% comment %} <li class="menu-item"><a href="{% url 'portfolio_engagement' %}">Portal</a></li> {% endcomment %}
+                                                    </ul>
+                                                </li>
+
                                                 <!-- <li class="menu-item"><a href="{% url 'blog:all_blogs' %}">Blog</a></li> -->
                                                 <li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
                                             </ul>
@@ -257,15 +278,18 @@
             <div class="footer_bar_wrapper ">
                 <div class="social_wrapper">
                     <ul>
-                        <li class="facebook"><a target="_blank" href="https://www.facebook.com/NelsonsVP"><i class="fa fa-facebook-official"></i></a></li>
-                        <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/nelsons_vp?utm_medium=copy_link"><i class="fa fa-instagram"></i></a></li>
+                        <li class="links"><a title="Social Media Links" href="https://www.nelsonsvp.com/link_page/"><i class="fa-solid fa-timeline"></i></a></li>
+                        <li class="facebook"><a target="_blank" title="Facebook" href="https://www.facebook.com/NelsonsVP"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="instagram"><a target="_blank" title="Instagram" href="https://instagram.com/nelsons_vp?utm_medium=copy_link"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li class="youtube"><a target="_blank" title="YouTube" href="https://www.youtube.com/channel/UCHMinaSDQ4R5X8187zlWNQg"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li class="tiktok"><a target="_blank" title="TikTok" href="https://www.tiktok.com/@nelsons_vp?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a></li>
                         <!-- <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
                         <li class="flickr"><a target="_blank" title="Flickr" href="#"><i class="fa fa-flickr"></i></a></li>
                         <li class="pinterest"><a target="_blank" title="Pinterest" href="#"><i class="fa fa-pinterest"></i></a></li> -->
 
                     </ul>
                 </div>
-                <div id="copyright">© Copyright Nelson's Video & Photography</div>
+                <div id="copyright">ALL CONTENT COPYRIGHT © 2022 NELSON'S VIDEO & PHOTOGRAPHY</div>
 
                 <div id="copyright"><a href="https://www.lopezbuild.com/" target="_blank">Website Developed by Jose J. Lopez</a></div>
                 <br class="clear" />
